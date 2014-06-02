@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class TriangleArea {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int xA = scan.nextInt();
+		int yA = scan.nextInt();
+		int xB = scan.nextInt();
+		int yB = scan.nextInt();
+		int xC = scan.nextInt();
+		int yC = scan.nextInt();
+		calculateTriangleArea(xA, yA, xB, yB, xC, yC);
+	}
+
+	private static void calculateTriangleArea(int xA, int yA, int xB, int yB, int xC,
+			int yC) {
+		int area = 0;
+		area = Math.abs(Math.round(((xA*(yB - yC)) + (xB*(yC - yA)) + (xC*(yA - yB))) / 2));
+		printResult(area);
+	}
+
+	private static void printResult(int number) {
+		System.out.println(number);
+	}
+}
